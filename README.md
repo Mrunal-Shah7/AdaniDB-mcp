@@ -1,4 +1,4 @@
-# Database MCP Server
+# MySQL based MCP Server
 
 A Java Spring-based Model Context Protocol (MCP) server that provides seamless database access and querying capabilities through MCP tools. This server enables AI assistants and other MCP clients to interact with your database using structured parameters and queries.
 
