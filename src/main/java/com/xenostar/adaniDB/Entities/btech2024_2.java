@@ -2,50 +2,50 @@ package com.xenostar.adaniDB.Entities;
 
 
 public class btech2024_2 {
-    private double enrollment;
-    private String name;
-    private Integer year;
-    private String division;
-    private String temp;
+   private Integer SR;
+   private String TEMP;
+   private String NAME;
+   private String PROGRAM;
+   private String DIVISION;
 
-    public double getEnrollment() {
-        return enrollment;
+    public Integer getSR() {
+        return SR;
     }
 
-    public void setEnrollment(double enrollment) {
-        this.enrollment = enrollment;
+    public void setSR(Integer SR) {
+        this.SR = SR;
     }
 
-    public String getName() {
-        return name;
+    public String getTEMP() {
+        return TEMP;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setTEMP(String TEMP) {
+        this.TEMP = TEMP;
     }
 
-    public Integer getYear() {
-        return year;
+    public String getNAME() {
+        return NAME;
     }
 
-    public void setYear(Integer year) {
-        this.year = year;
+    public void setNAME(String NAME) {
+        this.NAME = NAME;
     }
 
-    public String getDivision() {
-        return division;
+    public String getPROGRAM() {
+        return PROGRAM;
     }
 
-    public void setDivision(String division) {
-        this.division = division;
+    public void setPROGRAM(String PROGRAM) {
+        this.PROGRAM = PROGRAM;
     }
 
-    public String getTemp() {
-        return temp;
+    public String getDIVISION() {
+        return DIVISION;
     }
 
-    public void setTemp(String temp) {
-        this.temp = temp;
+    public void setDIVISION(String DIVISION) {
+        this.DIVISION = DIVISION;
     }
 }
 

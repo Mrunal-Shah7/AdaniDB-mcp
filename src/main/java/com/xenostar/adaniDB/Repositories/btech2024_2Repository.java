@@ -21,11 +21,11 @@ public class btech2024_2Repository {
 
     public btech2024_2 mapRowTobtech2024_2(ResultSet rs, int rowNum) throws SQLException {
         btech2024_2 btech2024_2 = new btech2024_2();
-        btech2024_2.setEnrollment(rs.getDouble("enrollment"));
-        btech2024_2.setName(rs.getString("name"));
-        btech2024_2.setDivision(rs.getString("division"));
-        btech2024_2.setYear(rs.getInt("year"));
-        btech2024_2.setTemp(rs.getString("temp"));
+        btech2024_2.setNAME(rs.getString("NAME"));
+        btech2024_2.setDIVISION(rs.getString("DIVISION"));
+        btech2024_2.setPROGRAM(rs.getString("PROGRAM"));
+        btech2024_2.setSR(rs.getInt("SR"));
+        btech2024_2.setTEMP(rs.getString("TEMP"));
         return  btech2024_2;
     }
 
@@ -34,12 +34,6 @@ public class btech2024_2Repository {
     public List<btech2024_2> findAll() {
         String sql = "SELECT * FROM btech2024_2";
         return jdbcTemplate.query(sql, this::mapRowTobtech2024_2);
-    }
-
-    @Tool(name = "get_all_2nd_year_students_from_table2_by_enrollment",description = "gets the data of the student who is in 2nd year,from the second out of the three tables of 2nd year students, by searching through the table with the given enrollment number")
-    public List<btech2024_2> findByEnrollment(Double enrollment) {
-        String sql = "SELECT * FROM btech2024_2  WHERE enrollment=?";
-        return jdbcTemplate.query(sql,this::mapRowTobtech2024_2,enrollment);
     }
 
     @Tool(name = "get_all_2nd_year_students_from_table2_by_name",description = "gets the data of the student who is in 2nd year,from the second out of the three tables of 2nd year students, by searching through the table with the given name")

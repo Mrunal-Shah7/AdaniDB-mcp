@@ -13,6 +13,8 @@ public class cse2022 {
 
     private String name;
 
+    private String USN;
+
     // Getters and Setters
     public Integer getSr() {
         return sr;
@@ -36,5 +38,13 @@ public class cse2022 {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public String getUSN() {
+        return USN;
+    }
+
+    public void setUSN(String USN) {
+        this.USN = USN;
     }
 }

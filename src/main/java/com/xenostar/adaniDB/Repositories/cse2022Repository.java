@@ -24,6 +24,7 @@ public class cse2022Repository {
         cse2022.setSr(rs.getInt("sr"));
         cse2022.setName(rs.getString("name"));
         cse2022.setEnrollment(rs.getDouble("enrollment"));
+        cse2022.setUSN(rs.getString("USN"));
         return cse2022;
     }
 
@@ -43,6 +44,12 @@ public class cse2022Repository {
     public List<cse2022> findByEnrollment(double enrollment) {
         String sql = "SELECT * FROM cse2022 WHERE enrollment = ?";
         return jdbcTemplate.query(sql, this::mapRowTocse2022, enrollment);
+    }
+
+    @Tool(name = "get_all_cse_students_from_4th_year_by_usn",description = "gets the data of the 4th year student who is in cse department by searching through the table with the given usn or university sear number")
+    public List<cse2022> findByUSN(String usn) {
+        String sql = "SELECT * FROM cse2022 WHERE LOWER(usn) LIKE LOWER(?)";
+        return  jdbcTemplate.query(sql, this::mapRowTocse2022, "%"+usn+"%");
     }
 
 
